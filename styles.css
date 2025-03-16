@@ -1,0 +1,133 @@
+/* Reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  header {
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+  }
+  
+  h1 {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+  }
+  
+  section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  /* About me and portfolio */
+  .about-me p, .portfolio p {
+    margin: 20px 0;
+    font-size: 1.1rem;
+  }
+  
+  .certificates h2, .portfolio h2, .about-me h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .portfolio-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #6e8efb;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .portfolio-btn:hover {
+    background: #a777e3;
+  }
+  
+  /* Certificate gallery */
+  .gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  /* Small, landscape aligned images */
+  .cert-image {
+    width: 250px; /* Smaller size */
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Hover effect */
+  .cert-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Modal (Zoom on click) */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    padding-top: 80px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 10px;
+  }
+  
+  #close {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  #close:hover {
+    color: #ccc;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .cert-image {
+      width: 90%;
+      height: auto;
+    }
+  
+    .modal-content {
+      width: 95%;
+    }
+  }
+  
